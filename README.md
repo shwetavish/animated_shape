@@ -1,16 +1,20 @@
-# animated_shape
+# Animated Shape
 
-A new Flutter project.
+A new Flutter project for use Animated Shape in welcome screen.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![animated_shape](https://user-images.githubusercontent.com/28589666/206635599-946b951d-e3d2-4e43-8044-7190e0face18.gif)
 
-A few resources to get you started if this is your first Flutter project:
+## import AnimatedShape
+```dart
+import 'animated_shape.dart';
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Easy to Use
+```dart
+AnimatedShape(
+  color: Colors.blue,
+  show: true,
+  title: 'Sign In',
+)
+```
