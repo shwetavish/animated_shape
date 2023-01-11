@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TopShape extends CustomClipper<Path> {
+import '../../../utils/app_constant.dart';
+
+class WateryWaveShape extends CustomClipper<Path> {
   final AnimationController controller;
 
-  TopShape._(this.controller);
+  WateryWaveShape._(this.controller);
 
   static Widget draw(
     Color color,
@@ -12,7 +14,7 @@ class TopShape extends CustomClipper<Path> {
     AnimationController controller,
   ) {
     return ClipPath(
-      clipper: TopShape._(controller),
+      clipper: WateryWaveShape._(controller),
       child: ColoredBox(
         color: color,
         child: SafeArea(
@@ -23,7 +25,7 @@ class TopShape extends CustomClipper<Path> {
               style: const TextStyle(
                 fontSize: 34,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: white,
               ),
             ),
           ),

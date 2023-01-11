@@ -3,18 +3,19 @@
 A new Flutter project for use Animated Shape in welcome screen.
 
 
-![animated_shape](https://user-images.githubusercontent.com/28589666/206635599-946b951d-e3d2-4e43-8044-7190e0face18.gif)
+![watery_wave](https://user-images.githubusercontent.com/28589666/211745817-ac455501-fe94-4505-b14f-ef7f31c45d1e.gif)
+![circular_chart](https://user-images.githubusercontent.com/28589666/211744808-cc6f0267-66cd-4de5-a57f-fb1d61c53aaf.gif)
 
 ## import AnimatedShape
 ```dart
-import 'animated_shape.dart';
+import 'my_animation.dart'.dart';
 ```
 
 ## Easy to Use
 ```dart
-AnimatedShape(
-  color: Colors.blue,
+MyAnimation(
+  color: Colors.red,
   show: true,
-  title: 'Sign In',
+  title: 'Watery wave',
 )
 ```
