@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 
-import '../widget/animated_shape.dart';
+import '../../../utils/app_constant.dart';
+import '../widget/my_animation.dart';
 
-class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key, required this.title}) : super(key: key);
+class WateryWavePage extends StatefulWidget {
+  const WateryWavePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<SignInPage> createState() => _SignInPageState();
+  State<WateryWavePage> createState() => _WateryWavePageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _WateryWavePageState extends State<WateryWavePage> {
   BehaviorSubject<bool> showShapeStream = BehaviorSubject();
   bool showShape = true;
 
@@ -27,10 +28,10 @@ class _SignInPageState extends State<SignInPage> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: white,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                      color: Colors.black26,
+                      color: textBoxBorderColor,
                       width: 1.5,
                     ),
                   ),
@@ -43,7 +44,7 @@ class _SignInPageState extends State<SignInPage> {
                       hintStyle: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
-                        color: Colors.black54,
+                        color: hintColor,
                       ),
                     ),
                   ),
@@ -53,10 +54,10 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: white,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                      color: Colors.black26,
+                      color: textBoxBorderColor,
                       width: 1.5,
                     ),
                   ),
@@ -69,7 +70,7 @@ class _SignInPageState extends State<SignInPage> {
                       hintStyle: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
-                        color: Colors.black54,
+                        color: hintColor,
                       ),
                     ),
                   ),
@@ -87,7 +88,7 @@ class _SignInPageState extends State<SignInPage> {
                   child: const Text(
                     'Sign In',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: white,
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                     ),
@@ -100,8 +101,8 @@ class _SignInPageState extends State<SignInPage> {
               stream: showShapeStream,
               builder: (context, snapshot) {
                 showShape = snapshot.data ?? showShape;
-                return AnimatedShape(
-                  color: Colors.blue,
+                return MyAnimation(
+                  color: myRed,
                   show: showShape,
                   title: widget.title,
                 );

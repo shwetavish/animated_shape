@@ -1,5 +1,7 @@
-import 'package:animated_shape/ui/signinpage.dart';
+import 'package:animated_shape/utils/app_constant.dart';
 import 'package:flutter/material.dart';
+
+import 'design_widget_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'Animated Shape',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        // primarySwatch: Colors.blue,
+        primarySwatch: buildMaterialColor(myRed),
       ),
-      home: const SignInPage(title: 'Sign In'),
+      home: const DesignWidgetList(title: 'Animated Designs'),
     );
   }
 }

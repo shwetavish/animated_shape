@@ -1,10 +1,11 @@
 import 'dart:async';
 
-import 'package:animated_shape/component/top_shape.dart';
 import 'package:flutter/material.dart';
 
-class AnimatedShape extends StatefulWidget {
-  const AnimatedShape({
+import '../component/watery_wave_shape.dart';
+
+class MyAnimation extends StatefulWidget {
+  const MyAnimation({
     Key? key,
     required this.color,
     required this.show,
@@ -16,10 +17,10 @@ class AnimatedShape extends StatefulWidget {
   final String title;
 
   @override
-  State<AnimatedShape> createState() => _AnimatedShapeState();
+  State<MyAnimation> createState() => _MyAnimationState();
 }
 
-class _AnimatedShapeState extends State<AnimatedShape>
+class _MyAnimationState extends State<MyAnimation>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
 
@@ -43,7 +44,7 @@ class _AnimatedShapeState extends State<AnimatedShape>
   }
 
   @override
-  void didUpdateWidget(covariant AnimatedShape oldWidget) {
+  void didUpdateWidget(covariant MyAnimation oldWidget) {
     super.didUpdateWidget(oldWidget);
     debugPrint('animate shape didUpdateWidget: ${widget.show}');
     if (widget.show) {
@@ -60,7 +61,7 @@ class _AnimatedShapeState extends State<AnimatedShape>
       height: 480,
       child: AnimatedBuilder(
         animation: _animationController,
-        builder: (_, __) => TopShape.draw(
+        builder: (_, __) => WateryWaveShape.draw(
           widget.color,
           widget.title,
           _animationController,

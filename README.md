@@ -7,7 +7,7 @@ A new Flutter project for use Animated Shape in welcome screen.
 
 ## import AnimatedShape
 ```dart
-import 'animated_shape.dart';
+import 'my_animation.dart';
 ```
 
 ## Easy to Use
